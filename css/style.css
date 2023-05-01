@@ -40,13 +40,24 @@ body {
 .nav-item-text-header {
   font-size: 25px;
   font-weight: bold;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.nav-item-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-item-text {
   font-size: 15px;
   font-weight: bold;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
-
 
 .projects {
   grid-row-start: 1;
@@ -61,12 +72,49 @@ body {
   grid-template-rows: 20px 3fr 3fr 3fr;
 }
 
-.project-title,
 .project-item {
-  border: 1px solid black;
+  background-color: white;
 }
 
 .project-title {
   grid-column-start: 1;
   grid-column-end: 3;
+}
+
+.project-item {
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 10px repeat(3, 1fr) 5fr;
+  grid-template-rows: 30px 1fr 1fr;
+  gap: 5px;
+}
+
+.project-item-bar {
+  background-color: orange;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.project-item-title {
+  font-weight: bold;
+  font-size: 15px;
+  grid-column-start: 2;
+  grid-column-end: 7;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+}
+
+.project-item-body {
+  font-size: 12px;
+  grid-column-start: 2;
+  grid-column-end: 7;
+}
+
+.project-item-buttons {
+  display: flex;
+  justify-content: left;
+  align-items:flex-end
 }
